@@ -1,0 +1,41 @@
+
+   body{
+      background-image: linear-gradient(to right,rgb(228, 217, 217),black);
+   }
+
+   .home-style{
+    height: 700px;
+   }
+   .home-content{
+    margin: 200px 900px 0px 70px;
+    text-align: left;
+   }
+
+   .home-span{
+    color: rgb(157, 234, 244);
+   }
+   .home-desc{
+    margin: 0px 550px 0px 70px;
+    text-align: left;
+    color: rgb(11, 11, 11);
+    
+   }
+
+   .home-btn{
+    margin: 30px 1200px 0px 0px;
+    align-items:start;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: #106eea;
+    text-decoration: none;
+
+   }
+
