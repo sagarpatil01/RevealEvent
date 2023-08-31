@@ -1,0 +1,11 @@
+  .slideshow_Image {
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+  }
+  
+  .slideshow_Image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
