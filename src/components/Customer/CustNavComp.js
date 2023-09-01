@@ -33,6 +33,9 @@ export default function CustNavComp(){
                             <Link to="/customer_home" className="nav-link px-3"><HomeIcon color="success" /></Link>
                         </li>
                         <li className="nav-item">
+                            <Link to="/profilecust" className="nav-link px-3">Profile</Link>
+                        </li>
+                        <li className="nav-item">
                             <Link to="/standup" className="nav-link px-3">Standup Comedy</Link>
                         </li>
                         <li className="nav-item">
@@ -53,7 +56,7 @@ export default function CustNavComp(){
                     </ul>
                         {/* <h5><Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar></h5> */}
                     <div><h5>{customer && customer.first_name} {customer && customer.last_name} </h5></div>
-                    
+                   
 
                 </div>
             </nav>

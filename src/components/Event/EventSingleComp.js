@@ -32,7 +32,7 @@ export default function EventSingle()
         <div>
             <CustNavComp/>
             <Grid container spacing={2}>
-                 <Grid item xs={12}>
+                 <Grid item  xs={12} sm={6} md={9}>
                 <Card sx={{ maxWidth: 1500}}>
                 <CardActionArea>
                 <CardMedia
@@ -52,19 +52,19 @@ export default function EventSingle()
                 
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                Date :: {se.event_date}
+                <b>Date ::</b> {se.event_date}
                 
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                 Duration ::{se.duration}
+                <b>Duration ::</b> {se.duration}
                 
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                 Ticket Price ::{se.price}
+                 <b>Ticket Price ::</b>{se.price} Rs.
                 
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                 Starting Time ::{se.starttime}
+                 <b>Starting Time ::</b>{se.starttime}
                 
                 </Typography>
                 </CardContent>
@@ -75,6 +75,16 @@ export default function EventSingle()
                 </CardActionArea>
                </Card> 
                </Grid>
+               <Grid item  xs={12} sm={6} md={3}>
+                    <div class="card text-white bg-dark mb-3"style={{ maxWidth: '18rem' }}>
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dark card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    </div>
+                
+                </Grid>
                </Grid>
                
         </div>

@@ -37,6 +37,9 @@ import OrganizerInfo from './components/Admin/OrganizerInfo';
 import CustomerLogin from './components/Admin/CustomerLogin';
 import EventInfo from './components/Admin/EventInfo';
 import About from './components/Home/AboutComp';
+import CustProfile from './components/Customer/CustProfile';
+import Approvedreq from './components/Organizer/OrgApprovedReq';
+import DeclineRequest from './components/Artist/ArtistDeclineComp';
 
 
 function App() {
@@ -74,14 +77,18 @@ function App() {
             <Route path="/music" element={<MusicComp/>}></Route>
             <Route path="/dance" element={<DanceComp/>}></Route>
             <Route path="/poetry" element={<PoetryComp/>}></Route>
+            <Route path="/profilecust" element={<CustProfile/>}></Route>
+
 
             <Route path="/view_requests" element={<ArtistRequest/>}></Route>
             <Route path="/requestapproved" element={<ApproveRequest/>}></Route>
+            <Route path="/requestdeclined" element={<DeclineRequest/>}></Route>
 
             <Route path="/addevent" element={<EventForm/>}></Route>
             <Route path="/viewartists" element={<ViewArtists/>}></Route>
             <Route path="/addeventsuccess" element={<AddEveSuccess/>}></Route>
             <Route path="/sendrequest" element={<SendRequest/>}></Route>
+            <Route path="/approvedrequests" element={<Approvedreq/>}></Route>
 
             <Route path="/logininfo" element={<LoginInfo/>}></Route>
             <Route path="/viewArtists" element={<ArtistInfo/>}></Route>

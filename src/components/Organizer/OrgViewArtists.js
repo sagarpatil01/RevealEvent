@@ -23,7 +23,7 @@ export default function ViewArtists()
           localStorage.setItem("loggedCustomer",JSON.stringify(obj))
           setOraganizer(obj.id);
           // alert(obj.id)
-          fetch("http://localhost:8080/getartist")
+          fetch("http://localhost:8080/forrequest?oid="+obj.id)
           .then(resp=>resp.json())
           .then(e=>setArtist(e))
       })
@@ -86,10 +86,10 @@ export default function ViewArtists()
                     </Typography>
                     <Typography>
                         <div>
-                            <span>   <b>Email : </b>{cs.email}   </span>
+                            {/* <span>   <b>Email : </b>{cs.email}   </span>
                         
                             <span>   <b>Contact No : </b>{cs.contact_no}  </span>
-                            
+                             */}
 
                         </div>                        
                     </Typography>

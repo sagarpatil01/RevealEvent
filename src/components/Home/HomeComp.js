@@ -20,6 +20,9 @@ export default function HomeComp(){
      <div>
         <CardComp/>
      </div>
+     <div>
+        {/* <SlideShow/> */}
+     </div>
         
      </div>
      

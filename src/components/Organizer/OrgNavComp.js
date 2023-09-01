@@ -34,6 +34,9 @@ export default function OrgNavComp(){
                             <Link to="/viewartists" className="nav-link px-3">View Artists</Link>
                         </li>
                         <li className="nav-item">
+                            <Link to="/approvedrequests" className="nav-link px-3">Approved Requests</Link>
+                        </li>
+                        <li className="nav-item">
                             <Link to="/addevent" className="nav-link px-3">Add Event</Link>
                         </li>
                         <li className="nav-item">

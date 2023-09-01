@@ -48,9 +48,6 @@ export default function ArtistRequest(){
         body:JSON.stringify(),
         
     }
-  
-    
-
      fetch("http://localhost:8080/updatestatus/"+e.id,reqOptions)
     .then(resp => {if(resp.ok)
                       return resp.text();
@@ -63,6 +60,28 @@ export default function ArtistRequest(){
 
     navigate(`/requestapproved`)
                 }
+
+
+                const deleteData = (e) => {
+                  // e.preventDefault();
+                   const reqOptions={
+                       method:'DELETE',
+                       headers:{'content-type':'application/json'},
+                       body:JSON.stringify(),
+                       
+                   }
+                    fetch("http://localhost:8080/deleterequest/"+e.id,reqOptions)
+                   .then(resp => {if(resp.ok)
+                                     return resp.text();
+                                   else
+                                     throw new Error("Server error");
+                                  })
+                   .then(text => text.length ? JSON.parse(text):{})
+                   .then(obj=>console.log(obj))
+                   .catch(error => console.error("Request failed:", error));
+               
+                   navigate(`/requestdeclined`)
+                               }
 
     return(
         <div>
@@ -100,7 +119,7 @@ export default function ArtistRequest(){
                   </CardContent>
                   <CardActions>
                   <button type="button" class="btn btn-success" onClick={()=>{sendData(r)}}>Approve</button>
-                  {/* <button type="button" class="btn btn-danger">Decline</button> */}
+                  <button type="button" class="btn btn-danger" onClick={()=>{deleteData(r)}}>Decline</button> 
                   </CardActions>
                 </Card>
               </Grid>

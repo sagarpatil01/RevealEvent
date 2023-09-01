@@ -19,9 +19,9 @@ export default function EventComp()
         <CustNavComp/>
         <div>
 
-<h3>Welcome to our Event Ticket Booking System!</h3>
+<h3>Welcome to Event Ticket Booking System!</h3>
 
-<h5 style={{color:"gray"}}>Discover and Attend Your Favorite Events with Ease
+<h5 style={{color:"white"}}>Discover and Attend Your Favorite Events with Ease
 
 Looking for the perfect way to experience concerts, conferences, workshops, and more? Look no further! Our Event Ticket Booking System offers a seamless and convenient way to explore a diverse range of events and secure your spot hassle-free.</h5>
 <br/>
@@ -50,6 +50,9 @@ Looking for the perfect way to experience concerts, conferences, workshops, and 
                     </Typography>
                     <Typography>
                      {cs.description}
+                    </Typography>
+                    <Typography>
+                     {cs.event_date}
                     </Typography>
                   </CardContent>
                   <CardActions>
