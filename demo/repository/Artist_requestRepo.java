@@ -21,4 +21,8 @@ public interface Artist_requestRepo extends JpaRepository<Artist_request, Intege
 	
 	@Query(value="select * from artist_request where status=false and art_id= :aid",nativeQuery = true)
 	public List<Artist_request> byartist(@Param("aid") int aid);
+	
+	@Query(value="select * from artist_request where status=true and org_id= :oid",nativeQuery = true)
+	public List<Artist_request> byorganizer(@Param("oid") int oid);
 }
+

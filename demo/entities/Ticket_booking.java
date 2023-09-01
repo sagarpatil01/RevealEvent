@@ -1,6 +1,7 @@
 package com.example.demo.entities;
 
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,8 +29,8 @@ public class Ticket_booking {
 	@Column
 	private float total_amount;
 	@Column
-	@JsonFormat(pattern = "yyyy-mm-dd")
-	private Date booking_date;
+	//@JsonFormat(pattern = "yyyy-mm-dd")
+	private LocalDateTime booking_date;
 	@Column
 	private String payment_status;
 	@Column
@@ -47,7 +48,7 @@ public class Ticket_booking {
 
 	}
 
-	public Ticket_booking(int id, int quantity, float total_amount, Date booking_date, String payment_status,
+	public Ticket_booking(int id, int quantity, float total_amount, LocalDateTime booking_date, String payment_status,
 			String payment_method, Event event_id, Customer customer_id) {
 		super();
 		this.id = id;
@@ -60,7 +61,7 @@ public class Ticket_booking {
 		this.customer_id = customer_id;
 	}
 
-	public Ticket_booking(int quantity, float total_amount, Date booking_date, String payment_status,
+	public Ticket_booking(int quantity, float total_amount, LocalDateTime booking_date, String payment_status,
 			String payment_method, Event event_id, Customer customer_id) {
 		super();
 		this.quantity = quantity;
@@ -96,11 +97,13 @@ public class Ticket_booking {
 		this.total_amount = total_amount;
 	}
 
-	public Date getBooking_date() {
+	
+
+	public LocalDateTime getBooking_date() {
 		return booking_date;
 	}
 
-	public void setBooking_date(Date booking_date) {
+	public void setBooking_date(LocalDateTime booking_date) {
 		this.booking_date = booking_date;
 	}
 

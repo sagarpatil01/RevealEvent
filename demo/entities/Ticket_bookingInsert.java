@@ -1,12 +1,13 @@
 package com.example.demo.entities;
 
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 public class Ticket_bookingInsert {
 
 	int quantity;
 	float total_amount;
-	Date booking_date;
+	LocalDateTime booking_date=LocalDateTime.now();
 	String payment_method;
 	String payment_status;
 	int eid;
@@ -23,10 +24,11 @@ public class Ticket_bookingInsert {
 	public void setTotal_amount(float total_amount) {
 		this.total_amount = total_amount;
 	}
-	public Date getBooking_date() {
+	
+	public LocalDateTime getBooking_date() {
 		return booking_date;
 	}
-	public void setBooking_date(Date booking_date) {
+	public void setBooking_date(LocalDateTime booking_date) {
 		this.booking_date = booking_date;
 	}
 	public String getPayment_method() {

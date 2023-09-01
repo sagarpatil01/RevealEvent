@@ -36,7 +36,7 @@ public class OganizerController {
 	{
 		User_type ui=outservice.getbyid(2);
 		
-		Login lo=new Login(or.getUsername(),or.getPassword(),ui);
+		Login lo=new Login(or.getUsername(),or.getPassword(),false,ui);
 		Login saveo=olservice.insertlogin(lo);
 		
 		Organizer o=new Organizer(or.getCompany_name(),or.getLicence_no(),or.getEmail(),or.getContact_no(),saveo);

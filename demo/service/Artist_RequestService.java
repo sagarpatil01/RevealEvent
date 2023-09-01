@@ -45,4 +45,9 @@ public class Artist_RequestService {
 	{
 		return arrepo.byartist(aid);
 	}
+	
+	public List<Artist_request> byorg(int oid)
+	{
+		return arrepo.byorganizer(oid);
+	}
 }

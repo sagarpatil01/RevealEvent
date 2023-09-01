@@ -52,4 +52,9 @@ public class ArtistService {
 	{
 		return artistrepo.getartist(gid);
 	}
+	
+	public List<Artist> forrequest(int oid)
+	{
+		return artistrepo.forreq(oid);
+	}
 }

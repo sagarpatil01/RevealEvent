@@ -25,6 +25,8 @@ public class Login {
 	 @Column
 	 private String password;
 	
+	 @Column
+	 private boolean status;
 	 @ManyToOne
 	 @JoinColumn(name="user_type_id")
 	 User_type user_type_id;
@@ -40,20 +42,22 @@ public class Login {
 
 	
 
-	public Login(int id, String username, String password, User_type user_type_id) {
+	public Login(int id, String username, String password,boolean status, User_type user_type_id) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.password = password;
+		this.status=status;
 		this.user_type_id = user_type_id;
 	}
 
     
 
-	public Login(String username, String password, User_type user_type_id) {
+	public Login(String username, String password,boolean status, User_type user_type_id) {
 		super();
 		this.username = username;
 		this.password = password;
+		this.status=status;
 		this.user_type_id = user_type_id;
 	}
 
@@ -94,6 +98,19 @@ public class Login {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+ 
+	
+
+
+	public boolean isStatus() {
+		return status;
+	}
+
+
+
+	public void setStatus(boolean status) {
+		this.status = status;
 	}
 
 

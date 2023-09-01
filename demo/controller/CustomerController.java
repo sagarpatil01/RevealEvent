@@ -54,7 +54,7 @@ public class CustomerController {
 		String username=cr.getUsername();
 		String password=cr.getPassword();
 		User_type u=utservice.getbyid(1);
-		Login l=new Login(username,password,u);
+		Login l=new Login(username,password,true,u);
 		Login saved=lservice.insertlogin(l);
 		
 		String first_name=cr.getFirst_name();

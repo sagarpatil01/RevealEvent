@@ -22,4 +22,7 @@ public interface ArtistRepo extends JpaRepository<Artist, Integer> {
 	
 	@Query(value="select * from artist  where genre_cat_id= :gid",nativeQuery = true)
 	public List<Artist> getartist(@Param("gid") int gid);
+	
+	@Query(value="SELECT * from artist a where a.id not in(select b.art_id from artist_request b where b.org_id= :oid)",nativeQuery = true)
+	public List<Artist> forreq(@Param("oid") int oid);
 } 

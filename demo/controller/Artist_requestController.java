@@ -74,4 +74,10 @@ public class Artist_requestController {
 		arservice.updstatus(id);
 	}
 	
+	@GetMapping("/getbyorg")
+	public List<Artist_request> byorga(@Param("oid") int oid)
+	{
+		return arservice.byorg(oid);
+	}
+	
 }

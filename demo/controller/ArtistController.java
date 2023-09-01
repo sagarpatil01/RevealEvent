@@ -43,7 +43,7 @@ public class ArtistController {
 		String username=ar.getUsername();
 		String password=ar.getPassword();
 		User_type ua=uservice.getbyid(3);
-		Login la=new Login(username,password,ua);
+		Login la=new Login(username,password,true,ua);
 		Login saveda=lservice.insertlogin(la);
 		
 		String fname=ar.getFirst_name();
@@ -77,5 +77,11 @@ public class ArtistController {
 	public List<Artist> getartistbygid(@Param("gid") int gid)
 	{
 		return aservice.artistbygid(gid);
+	}
+	
+	@GetMapping("/forrequest")
+	public List<Artist> forartistreq(@Param("oid") int oid)
+	{
+		return aservice.forrequest(oid);
 	}
 }
