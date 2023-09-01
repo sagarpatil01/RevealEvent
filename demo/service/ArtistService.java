@@ -47,4 +47,9 @@ public class ArtistService {
 		}
 		return a;
 	}
+	
+	public List<Artist> artistbygid(int gid)
+	{
+		return artistrepo.getartist(gid);
+	}
 }
