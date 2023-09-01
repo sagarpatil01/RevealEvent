@@ -64,7 +64,9 @@ public class EventController {
 	@PostMapping(value="/insertimage/{id}",consumes="multipart/form-data")
 	public boolean uploadImage(@PathVariable("id") int id,@RequestBody MultipartFile file)
     {
+		System.out.println(id);
 		System.out.println(file.getOriginalFilename());
+		System.out.println(file.getSize());
     	boolean flag=true;
     	try
     	{

@@ -62,14 +62,24 @@ public class EventService {
 	{
 		return erepo.bydate();
 	}
+	
+	public Event eventid(int id)
+	{
+		return erepo.findById(id).get();
+	}
     
     public boolean upload(int id,byte [] photo)
     {
-    	if(erepo.uploadimg(id, photo)==1)
+    	System.out.println("in service");
+    	int n = erepo.uploadimg(id, photo);
+    	System.out.println(n);
+    	if(n==1)
     		return true;
     	else
     		return false;
     }
+    
+    
     
     
 	

@@ -41,5 +41,10 @@ public class CustomerService {
 		}
 		return c;
 	}
+	
+	public Customer custid(int id)
+	{
+		return crepo.findById(id).get();
+	}
 
 }

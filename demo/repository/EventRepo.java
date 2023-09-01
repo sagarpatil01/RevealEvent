@@ -26,5 +26,6 @@ public interface EventRepo extends JpaRepository<Event, Integer> {
 	
 	@Modifying
 	@Query("update Event set img_landscape = :file where id= :id")
+	//@Query(value="update event set img_landscape= :file where id= :id",nativeQuery = true)
 	public int uploadimg(int id,byte [] file);
 }
